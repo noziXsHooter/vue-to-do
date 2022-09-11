@@ -1,17 +1,53 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <!-- Content -->
+  <div class="px-3 py-10 md:px-10">
+    <div class="w-full sm:w-1/2 lg:w-1/3 mx-auto">
+
+        <TodoSpinner v-if="loading"/>
+      <div v-else>
+        <TodoFormAdd/>
+
+        <TodoItems/>
+
+        <TodoEmpty/>
+      </div>
+    </div>
+  </div>
+  <!--/ Content -->
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TodoItems from '@/components/TodoItems.vue';
+import TodoSpinner from '@/components/TodoSpinner.vue';
+import TodoFormAdd from '@/components/TodoFormAdd.vue';
+import TodoEmpty from '@/components/TodoEmpty.vue';
+import axios from 'axios';
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    TodoSpinner,
+    TodoFormAdd,
+    TodoItems,
+    TodoEmpty,
+  },
+  data(){
+    return {
+      loading: false
+    }
+  },
+
+  created() {
+    this.loading = true
+    axios.get('http://localhost:3000/todos')
+      .then((response) => {
+        this.$store.commit('storeTodos',response.data)
+      })
+      .finally(()=>{
+        this.loading = false
+      })
+  },
+};
 </script>
 
 <style>
