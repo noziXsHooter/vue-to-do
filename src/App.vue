@@ -11,6 +11,7 @@
 
         <TodoEmpty/>
       </div>
+
     </div>
   </div>
   <!--/ Content -->
@@ -39,10 +40,7 @@ export default {
 
   created() {
     this.loading = true
-    axios.get('http://localhost:3000/todos')
-      .then((response) => {
-        this.$store.commit('storeTodos',response.data)
-      })
+    this.$store.dispatch('getTodos')
       .finally(()=>{
         this.loading = false
       })

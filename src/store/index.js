@@ -11,7 +11,13 @@ export default createStore({
     }
   },
   actions: {
+    getTodos({ commit }) {
+      return axios.get('http://localhost:3000/todos')
+        .then((response) => {
+          this.$store.commit('storeTodos',response.data)
+        })
   },
+},
   modules: {
   }
 })
