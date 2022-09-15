@@ -22,7 +22,7 @@ import TodoItems from '@/components/TodoItems.vue';
 import TodoSpinner from '@/components/TodoSpinner.vue';
 import TodoFormAdd from '@/components/TodoFormAdd.vue';
 import TodoEmpty from '@/components/TodoEmpty.vue';
-import axios from 'axios';
+//import axios from 'axios';
 
 export default {
   name: "App",
@@ -45,7 +45,7 @@ export default {
         this.loading = false
       })
   },
-};
+}
 </script>
 
 <style>
