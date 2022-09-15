@@ -18,7 +18,7 @@ export default createStore({
       }
       state.todos.unshift(payload) //'unshift' adiciona na primeira posicao, 'push' adiciona no final
     },
-    sDeleteTodo(state, id) {
+    deleteTodo(state, id) {
       const index = state.todos.findIndex(todo => todo.id === id)
       
       if (index >= 0 ) {
