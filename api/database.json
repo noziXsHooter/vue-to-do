@@ -1,14 +1,9 @@
 {
   "todos": [
     {
-      "id": 1,
-      "title": "Estudar javascript",
-      "completed": true
-    },
-    {
-      "id": 2,
       "title": "Estudar Vue",
-      "completed": false
+      "completed": true,
+      "id": 2
     },
     {
       "id": 3,
@@ -39,16 +34,6 @@
       "title": "sdsadsa",
       "completed": false,
       "id": 8
-    },
-    {
-      "title": "dsada",
-      "completed": false,
-      "id": 9
-    },
-    {
-      "title": "sdad",
-      "completed": false,
-      "id": 10
     }
   ]
 }

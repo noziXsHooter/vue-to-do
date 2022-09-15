@@ -3,6 +3,7 @@ import axios from 'axios';
 
 export default createStore({
   state: {
+    todos: []
   },
   getters: {
   },
@@ -11,7 +12,18 @@ export default createStore({
       state.todos = payload
     },
     storeTodo(state, payload) {
+      const index = state.todos.findIndex(todo => todo.id === payload.id)
+      if (index >= 0) {
+        state.todos.splice(index, 1, payload)
+      }
       state.todos.unshift(payload) //'unshift' adiciona na primeira posicao, 'push' adiciona no final
+    },
+    sDeleteTodo(state, id) {
+      const index = state.todos.findIndex(todo => todo.id === id)
+      
+      if (index >= 0 ) {
+        state.todos.splice(index, 1)
+      }
     },
 
   },
@@ -32,7 +44,19 @@ export default createStore({
         axios.post('http://localhost:3000/todos', data).then ((response) => {
           commit('storeTodo', response.data)
         })
-      }
+      },
+
+      updateTodo({commit}, {id, data}) {
+        axios.put(`http://localhost:3000/todos/${id}`, data).then ((response) => {
+          commit('storeTodo', response.data)
+        })
+      },
+      deleteTodo({commit}, id) {
+        axios.delete(`http://localhost:3000/todos/${id}`).then (() => {
+          commit('deleteTodo', id)
+        })
+      },
+      
     },
   
   modules: {
