@@ -21,6 +21,12 @@ npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init
 ```
 
+### Install JSON Server
+```
+
+npm install -g json-server
+```
+
 ### Compiles and hot-reloads for development
 ```
 npm run serve
