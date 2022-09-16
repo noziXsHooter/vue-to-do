@@ -1,5 +1,7 @@
 # vue-to-do
 
+![alt text](github.com/noziXsHooter/vue-to-do/blob/master/src/assets/img/fronttodo.JPG?raw=true)
+
 ## Project setup
 ```
 npm install -g @vue/cli
