@@ -4,10 +4,18 @@
 
 ## Project setup
 ```
+
+### Install Vue CLI
+```
 npm install -g @vue/cli
 ```
 
+### Install VUEX
+```
 npm install vuex@next --save
+```
+
+### Install TailwindCSS as PostCss
 ```
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init
