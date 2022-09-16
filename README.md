@@ -1,11 +1,12 @@
 # vue-to-do
 
-![alt text](github.com/noziXsHooter/vue-to-do/blob/master/src/assets/img/fronttodo.JPG?raw=true)
+![alt text](https://github.com/noziXsHooter/vue-to-do/blob/master/src/assets/img/fronttodo.JPG?raw=true)
 
 ## Project setup
 ```
 npm install -g @vue/cli
 ```
+
 npm install vuex@next --save
 ```
 npm install -D tailwindcss postcss autoprefixer
