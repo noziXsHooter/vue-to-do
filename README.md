@@ -2,6 +2,12 @@
 
 ![alt text](https://github.com/noziXsHooter/vue-to-do/blob/master/src/assets/img/fronttodo.JPG?raw=true)
 
+
+## Description
+Project created using Vue.js, Vuex, TailwindCss and JSON-Server. 
+Vue Components with Composition API that is set of APIs that allows us to author Vue components using imported functions instead of declaring options.
+
+
 ## Project setup
 
 ### Install Vue CLI
