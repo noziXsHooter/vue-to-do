@@ -32,12 +32,10 @@ npm install -g json-server
 npm run serve
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
 ### Load Json-Server for development
+```
 json-server -watch database.json
+```
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
