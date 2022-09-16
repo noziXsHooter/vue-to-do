@@ -3,9 +3,7 @@
 ![alt text](https://github.com/noziXsHooter/vue-to-do/blob/master/src/assets/img/fronttodo.JPG?raw=true)
 
 ## Project setup
-```
 
-```
 ### Install Vue CLI
 ```
 
