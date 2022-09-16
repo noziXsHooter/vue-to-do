@@ -26,7 +26,6 @@ import TodoFormAdd from '@/components/TodoFormAdd.vue';
 import TodoEmpty from '@/components/TodoEmpty.vue';
 import { ref } from 'vue';
 import { useStore } from 'vuex';
-//import axios from 'axios';
 
 export default {
   name: "App",
@@ -38,19 +37,18 @@ export default {
   },
 
   setup() {
-    const loading = ref(false);
+      const loading = ref(false);
+      const store = useStore()
 
-    const store = useStore()
+      loading.value = true
+      store.dispatch('getTodos').finally(()=>{
+          loading.value = false
+        })
 
-    loading.value = true
-    store.dispatch('getTodos').finally(()=>{
-        loading.value = false
-      })
-
-    return {
-      loading,
-    }
-  },
+      return {
+        loading,
+      }
+    },
 }
 </script>
 
