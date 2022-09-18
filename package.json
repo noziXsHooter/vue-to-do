@@ -8,8 +8,10 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@vercel/node": "^2.5.14",
     "axios": "^0.27.2",
     "core-js": "^3.8.3",
+    "mysql": "^2.18.1",
     "vue": "^3.2.13",
     "vuex": "^4.0.0"
   },
@@ -45,5 +47,18 @@
     "last 2 versions",
     "not dead",
     "not ie 11"
-  ]
+  ],
+  "description": "![alt text](https://github.com/noziXsHooter/vue-to-do/blob/master/src/assets/img/fronttodo.JPG?raw=true)",
+  "main": "babel.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noziXsHooter/vue-to-do.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/noziXsHooter/vue-to-do/issues"
+  },
+  "homepage": "https://github.com/noziXsHooter/vue-to-do#readme"
 }
