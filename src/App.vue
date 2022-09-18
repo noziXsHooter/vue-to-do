@@ -1,6 +1,6 @@
 <template>
   <!-- Content -->
-  <h1 class="text-gray-200 text-4xl"> TO DO LIST</h1>
+  <h1 class="text-gray-200 text-4xl"> TO DO </h1>
   <div class="px-3 py-8 md:px-8">
     <div class="w-full sm:w-1/2 lg:w-1/3 mx-auto">
 
