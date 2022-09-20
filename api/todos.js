@@ -19,8 +19,19 @@ export default function handler(req, res) {
           });
         });
       }else if(req.method === 'POST'){
-  
-  
+        client.connect(function(err) {
+          if(err) {
+            return console.error('could not connect to postgres', err);
+          }
+          client.query(`INSERT INTO todos (id, title, completed) VALUES (5, '${req.body.title}',${req.body.completed})`, function(err, result) {
+            if(err) {
+              return console.error('error running query', err);
+            }
+            res.status(200).json(req.body);
+            console.log(req.body.id)
+          client.end();
+        });
+      });
       }else if(req.method === 'PUT'){
   
       }else if(req.method === 'DELETE'){
