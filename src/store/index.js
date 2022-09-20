@@ -31,7 +31,7 @@ export default createStore({
     getTodos({ commit }) {
       return new Promise( (resolve)=>{
         setTimeout( () => {
-          return axios.get('http://localhost:3000/api/todos')
+          return axios.get('./api/todos')
             .then((response) => {
               commit('storeTodos',response.data)
               resolve()
