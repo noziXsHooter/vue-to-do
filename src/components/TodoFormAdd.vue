@@ -1,6 +1,6 @@
 <template>
     <form
-        @submit.stop.prevent="addTodo"
+        @submit.stop="addTodo"
         class="flex items-center px-4 bg-gray-900 h-15
 rounded-sm border-l-2 border-green-400 mb-3"
     >
