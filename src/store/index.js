@@ -11,15 +11,15 @@ export default createStore({
       state.todos = payload
     },
     storeTodo(state, payload) {
-      const index = state.todos.findIndex(todo => todo.id === payload.id)
+      /* const index = state.todos.findIndex(todo => todo.id === payload.id)
       if (index >= 0) {
         state.todos.splice(index, 1, payload)
-      }else{
+      }else{ */
       state.todos.unshift(payload) //'unshift' adiciona na primeira posicao, 'push' adiciona no final
-    }
+   // }
   },
     deleteTodo(state, id) {
-      const index = state.todos.findIndex(todo => todo.id === id)
+       const index = state.todos.findIndex(todo => todo.id === id)
       
       if (index >= 0 ) {
         state.todos.splice(index, 1)
@@ -36,7 +36,7 @@ export default createStore({
               commit('storeTodos',response.data)
               resolve()
             })
-          }, 1000)
+          }, 200)
         })
       },
 
@@ -48,14 +48,14 @@ export default createStore({
       },
 
       updateTodo({commit}, {id, data}) {
-        return axios.put(`http://localhost:3000/todos/${id}`, data).then ((response) => {
+        return axios.put(`http://localhost:3000/api/todos/${id}`, data).then ((response) => {
           commit('storeTodo', response.data)
         })
       },
-      deleteTodo({commit}, id) {
-        return axios.delete(`http://localhost:3000/todos/${id}`).then (() => {
+      deleteTodo( {commit}, id) {
+        return axios.delete(`http://localhost:3000/api/todos/${id}`).then (() => {
           commit('deleteTodo', id)
-        })
+       })
       },
       
     },
