@@ -18,6 +18,10 @@ export default createStore({
       state.todos.unshift(payload) //'unshift' adiciona na primeira posicao, 'push' adiciona no final
     }
   },
+    storeTodoCheck(){
+
+    },
+
     deleteTodo(state, id) {
        const index = state.todos.findIndex(todo => todo.id === id)
       
@@ -48,7 +52,7 @@ export default createStore({
 
       updateTodo({commit}, {id, data}) {
         return axios.put(`./api/todos/${id}`, data).then ((response) => {
-          commit('storeTodo', response.data)
+          commit('storeTodoCheck', response.data)
         })
       },
       deleteTodo( {commit}, id) {
