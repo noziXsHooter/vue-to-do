@@ -1,22 +1,32 @@
 <template>
   <!-- Content -->
-  <h1 class="text-gray-200 text-4xl"> TO DO LIST</h1>
-  <div class="px-3 py-8 md:px-8">
-    <div class="w-full sm:w-1/2 lg:w-1/3 mx-auto">
+  <div class="px-4">
 
-        <TodoSpinner v-if="loading"/>
-      <div v-else>
-        <TodoFormAdd/>
-
-        <TodoItems
-            v-if="$store.state.todos.length"
-        />
-
-        <TodoEmpty v-else/>
-      </div>
+    <div class="border-1 border-black rounded-lg bg-gray-900 drop-shadow-lg">
+    <div class="bg-gray-300">
 
     </div>
+    <div class=" px-3 py-3 md:px-8 border-1 rounded-t-lg bg-gray-600">
+      <span class="text-gray-200 text-4xl"> TO DO LIST</span>
+    </div>
+      <div class="px-3 py-8 md:px-8">
+        <div class="w-full sm:w-1/2 lg:w-1/3 mx-auto">
+
+          <TodoSpinner v-if="loading"/>
+            <div v-else>
+          <TodoFormAdd/>
+            <TodoItems
+                v-if="$store.state.todos.length"
+            />
+            <TodoEmpty v-else/>
+          </div>
+        </div>
+      </div>
   </div>
+
+  </div>
+  
+  
   <!--/ Content -->
 </template>
 
