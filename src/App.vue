@@ -2,7 +2,7 @@
   <!-- Content -->
   <div class="px-4">
 
-    <div class="border-1 border-black rounded-lg bg-gray-900 drop-shadow-lg">
+    <div class="border-1 border-black rounded-lg max-w-xl bg-gray-900 drop-shadow-lg">
     <div class="bg-gray-300">
 
     </div>
